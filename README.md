@@ -106,19 +106,7 @@ HONEPY leverages Python Dash to populate the bar charts, Dash Bootstrap Componen
 
 <img src="/assets/images/Dashboard.PNG" alt="Dashboard" width="600"/>
 
-# VPS Hosting (General Tips)
-To host on VPS, follow the general tips.
 
-To gather logging information, it's advised to use a Virtual Private Server (VPS). VPS's are cloud-based hosts with Internet access. This provides a safe, isolated way to gather real-time information without having to configure and isolate infrastructure on your home network.
-
-You can get 10% off Hostinger VPS with this code (not sponsored on this GitHub project): https://www.hostinger.com/grantcollins
-
-A majority of VPS hosting providers will provide a Virtual Firewall where you can open ports. Ensure to open ports used by HONEYPY.
-- `Port 80`, `Port 5000`, `Port 2223` (Whichever port you configure to listen on real SSH connection), `Port 8050`. 
-
-When working on Linux-based distributions, also open the ports with IP Tables or Unfiltered Firewall (UFW). 
-- `ufw enable`
-- `ufw allow [port]`
 
 # Running in Background With Systemd
 To run HONEPY in the background, you can use Systemd for popular Linux-based distributions.
@@ -155,11 +143,3 @@ Start the `honepy.service` file with `systemctl start honepy.service`.
 - Dashboard hosted on seperate host to get results independent on honeypot host.
 - Add SSH Banner Tarpit to trap SSH sessions ✅ (`-t, --tarpit`)
 
-# Helpful Resources
-
-Resources and guides used while developing project.
-
-- https://securehoney.net/blog/how-to-build-an-ssh-honeypot-in-python-and-docker-part-1.html 
-- https://medium.com/@abdulsamie488/deceptive-defense-building-a-python-honeypot-to-thwart-cyber-attackers-2a9d2ced2760
-- https://gist.github.com/cschwede/3e2c025408ab4af531651098331cce45
-- https://www.hostinger.com/tutorials/how-to-change-ssh-port-vps

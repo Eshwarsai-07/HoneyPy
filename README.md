@@ -2,6 +2,31 @@
 
 A modular, graphic-based honeypot to capture IP Adresses, usernames, passwords, and commands from various protocols (SSH & HTTP supported right now). Written in Python.
 
+
+## Visual Overview
+
+```mermaid
+flowchart TD
+    A0["Honeypot Launcher/Orchestrator
+"]
+    A1["SSH Honeypot Module
+"]
+    A2["HTTP Honeypot Module
+"]
+    A3["Data Logging System
+"]
+    A4["Dashboard Data Processor
+"]
+    A5["Analytics Dashboard
+"]
+    A0 -- "Launches" --> A1
+    A0 -- "Launches" --> A2
+    A1 -- "Logs data to" --> A3
+    A2 -- "Logs data to" --> A3
+    A4 -- "Reads logs from" --> A3
+    A5 -- "Visualizes processed data from" --> A4
+```
+
 # Install
 
 **1) Clone repository.**
@@ -143,3 +168,21 @@ Start the `honepy.service` file with `systemctl start honepy.service`.
 - Dashboard hosted on seperate host to get results independent on honeypot host.
 - Add SSH Banner Tarpit to trap SSH sessions ✅ (`-t, --tarpit`)
 
+
+
+## Chapters
+
+1. [Honeypot Launcher/Orchestrator
+](docs/01_honeypot_launcher_orchestrator_.md)
+2. [SSH Honeypot Module
+](docs/02_ssh_honeypot_module_.md)
+3. [HTTP Honeypot Module
+](docs/03_http_honeypot_module_.md)
+4. [Data Logging System
+](docs/04_data_logging_system_.md)
+5. [Dashboard Data Processor
+](docs/05_dashboard_data_processor_.md)
+6. [Analytics Dashboard
+](docs/06_analytics_dashboard_.md)
+
+---
